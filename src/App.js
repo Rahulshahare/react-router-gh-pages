@@ -7,8 +7,8 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    // <Router basename='./react-router-gh-pages'>
-    <Router >
+    <Router basename='/react-router-gh-pages'>
+    {/* <Router > for local */}
       <div style={{ textAlign: 'center' }}>
         <Navbar/>
         <Routes>
