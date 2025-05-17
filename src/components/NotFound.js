@@ -1,6 +1,6 @@
 import React from "react";
 
-function _404 (){
+function NotFound (){
     return (
         <div>
             <h1>404</h1>
@@ -8,4 +8,4 @@ function _404 (){
         </div>
     )
 }
-export default _404;
+export default NotFound;

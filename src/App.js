@@ -4,19 +4,19 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
-import _404 from './components/404';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
     <Router basename='/react-router-gh-pages'>
-    {/* <Router> for local */}
+    {/* <Router> */}
       <div style={{ textAlign: 'center' }}>
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<_404/>} />
+          <Route path="*" element={<NotFound/>} />
         </Routes>
       </div>
     </Router>

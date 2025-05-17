@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function Contact(){
     return <>
         <h2>Contact us</h2>
-        <NavLink to="/contact" style={{ margin: '0 10px' }} activeStyle={{ fontWeight: 'bold' }}> 404 </NavLink>
+        <NavLink to="/link" style={{ margin: '0 10px' }} activeStyle={{ fontWeight: 'bold' }}> 404 </NavLink>
 
     </>
 }
