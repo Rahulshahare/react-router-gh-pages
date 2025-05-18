@@ -5,6 +5,8 @@ import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 import NotFound from './components/NotFound';
+import User from './components/User';
+import Search from './components/Search';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/user/:id" element={<User />} /> {/* Route with URL parameter */}
+          <Route path="/search" element={<Search />} /> {/* Route for query parameters */}
           <Route path="*" element={<NotFound/>} />
         </Routes>
       </div>
