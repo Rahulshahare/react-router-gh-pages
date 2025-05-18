@@ -9,7 +9,7 @@ import NotFound from './components/NotFound';
 function App() {
   return (
     <Router basename='/react-router-gh-pages'>
-    {/* <Router> */}
+     {/* <Router> */}
       <div style={{ textAlign: 'center' }}>
         <Navbar/>
         <Routes>
