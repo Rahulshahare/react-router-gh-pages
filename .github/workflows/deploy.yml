@@ -3,8 +3,8 @@ on:
   push:
     branches: [main]
 permissions:
-  contents: write # Allow writing to repository contents
-  pages: write   # Allow deploying to GitHub Pages
+  contents: write
+  pages: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,8 +14,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
+          cache: 'npm'
       - run: npm install
       - run: npm run build
+      - name: Create 404.html (optional)
+        run: cp build/index.html build/404.html || true # Optional, failsafe
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
