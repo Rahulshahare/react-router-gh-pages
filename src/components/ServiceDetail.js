@@ -1,5 +1,4 @@
 import { useParams, Link } from 'react-router-dom';
-import NavBar from './Navbar';
 
 // Mock service data
 const services = {

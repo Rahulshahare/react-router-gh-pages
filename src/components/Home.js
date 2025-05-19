@@ -1,5 +1,4 @@
-
-import NavBar from './Navbar';
+import SearchBar from './SearchBar';
 import ServiceCard from './ServiceCard';
 
 // Sample data (can be replaced with your API or Pullstate store)
@@ -12,6 +11,7 @@ const services = [
 function Home() {
   return (
     <div className="home">
+        <SearchBar/>
       <div className="service-list">
         {services.map((service) => (
           <ServiceCard key={service.id} {...service} />

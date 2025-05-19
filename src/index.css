@@ -175,3 +175,115 @@ body {
     color: #0a84ff;
   }
 }
+
+
+/* SearchBar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(247, 247, 247, 0.8); /* Translucent blur like navbar */
+  backdrop-filter: blur(10px); /* Apple-like blur effect */
+  border-radius: 10px; /* Rounded corners per HIG */
+  padding: 8px; /* 8-point grid */
+  margin: 8px 0; /* 8-point spacing */
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 17px; /* Body text per HIG */
+  color: #000000;
+  padding: 8px; /* 8-point padding */
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #8e8e93; /* Secondary text color */
+}
+
+.search-button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  min-width: 44px; /* Minimum touch target */
+  min-height: 44px;
+}
+
+.search-icon {
+  stroke: #8e8e93; /* Neutral gray for icon */
+}
+
+.search-button:hover .search-icon {
+  stroke: #007aff; /* Apple’s blue on hover */
+}
+
+@media (prefers-color-scheme: dark) {
+  .search-bar {
+    background: rgba(28, 37, 38, 0.8); /* Dark mode blur */
+  }
+  .search-input {
+    color: #ffffff;
+  }
+  .search-input::placeholder {
+    color: #8e8e93;
+  }
+  .search-icon {
+    stroke: #8e8e93;
+  }
+  .search-button:hover .search-icon {
+    stroke: #0a84ff;
+  }
+}
+
+/* SearchReseult */
+.search-results {
+  padding: 0 8px; /* 8-point safe area */
+}
+
+.content {
+  background: #ffffff; /* Page details background */
+  border-radius: 10px;
+  padding: 16px; /* 8-point grid doubled */
+  margin: 8px 0; /* 8-point spacing */
+}
+
+.title1 {
+  font-size: 28px; /* Title 1 per HIG */
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 8px 0; /* 8-point gap */
+}
+
+.body {
+  font-size: 17px; /* Body text */
+  color: #000000;
+  margin: 0 0 16px 0;
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* 8-point grid spacing */
+}
+
+.back-button {
+  font-size: 17px;
+  color: #007aff;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .content {
+    background: #2c2c2e; /* Dark mode page details */
+  }
+  .title1,
+  .body {
+    color: #ffffff;
+  }
+  .back-button {
+    color: #0a84ff;
+  }
+}
