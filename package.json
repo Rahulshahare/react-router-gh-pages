@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build && (copy build\\index.html build\\404.html || cp build/index.html build/404.html)",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -40,5 +40,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://rahulshahare.github.io/react-router-gh-pages/"
+  "homepage": "https://rahulshahare.github.io/react-router-gh-pages/",
+  "devDependencies": {
+    "workbox-cli": "^7.3.0"
+  }
 }
