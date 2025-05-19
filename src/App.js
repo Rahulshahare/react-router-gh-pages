@@ -7,17 +7,19 @@ import Contact from './components/Contact';
 import NotFound from './components/NotFound';
 import User from './components/User';
 import Search from './components/Search';
+import ServiceDetail from './components/ServiceDetail';
 
 function App() {
   return (
     <Router basename='/react-router-gh-pages'>
      {/* <Router> */}
-      <div style={{ textAlign: 'center' }}>
+      <div className='app'>
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/service/:id" element={<ServiceDetail/>} />
           <Route path="/user/:id" element={<User />} /> {/* Route with URL parameter */}
           <Route path="/search" element={<Search />} /> {/* Route for query parameters */}
           <Route path="*" element={<NotFound/>} />
