@@ -1,10 +1,10 @@
 name: Deploy to GitHub Pages
 on:
   push:
-    branches: [master]
+    branches: [main]
 permissions:
-  contents: write # Allow writing to repository contents
-  pages: write   # Allow deploying to GitHub Pages
+  contents: write
+  pages: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,6 +16,8 @@ jobs:
           node-version: '16'
       - run: npm install
       - run: npm run build
+      - name: Create 404.html
+        run: cp build/index.html build/404.html # Works on Ubuntu (Actions runner)
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
