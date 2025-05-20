@@ -12,7 +12,7 @@ body {
 
 .app {
   min-height: 100vh;
-  padding: 16px; /* 8-point grid doubled for safe area */
+  /*padding: 16px;  8-point grid doubled for safe area */
   box-sizing: border-box;
 }
 
@@ -29,35 +29,44 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 16px; /* 8-point grid spacing */
-  background: rgba(247, 247, 247, 0.8); /* Translucent light background */
-  backdrop-filter: blur(10px); /* Mimics Apple’s blur material */
+  padding: 8px 32px; /* 8-point grid */
+  background: rgba(247, 247, 247, 0.92); /* Tighter translucency */
+  backdrop-filter: blur(12px); /* Stronger blur like global.dist.css */
   position: sticky;
   top: 0;
   z-index: 1000;
+  margin-bottom: 8px; /* 8-point gap */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); /* Subtle shadow */
 }
 
 .large-title {
   font-size: 34px; /* Large Title per HIG */
   font-weight: 700;
   color: #000000;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px; /* 8-point grid doubled */
 }
 
 .nav-link {
-  font-size: 17px; /* Body text size */
-  color: #007aff; /* Apple’s blue for interactive elements */
+  font-size: 17px; /* Body text */
+  color: #007aff;
   text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {
   .nav-bar {
-    background: rgba(28, 37, 38, 0.8); /* Translucent dark background */
+    background: rgba(28, 37, 38, 0.92);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
   .large-title {
     color: #ffffff;
   }
   .nav-link {
-    color: #0a84ff; /* Slightly lighter blue for dark mode */
+    color: #0a84ff;
   }
 }
 
@@ -120,7 +129,7 @@ body {
 /* home */
 
 .home {
-  padding: 0 16px; /* Safe area padding */
+  padding: 0 32px; /* Safe area padding */
 }
 
 .service-list {
@@ -181,11 +190,12 @@ body {
 .search-bar {
   display: flex;
   align-items: center;
-  background: rgba(247, 247, 247, 0.8); /* Translucent blur like navbar */
-  backdrop-filter: blur(10px); /* Apple-like blur effect */
-  border-radius: 10px; /* Rounded corners per HIG */
+  background: rgba(247, 247, 247, 0.92); /* Tighter translucency like global.dist.css */
+  backdrop-filter: blur(12px); /* Slightly stronger blur for Apple-like effect */
+  border-radius: 12px; /* Slightly larger radius inspired by Apple’s web search */
   padding: 8px; /* 8-point grid */
   margin: 8px 0; /* 8-point spacing */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); /* Subtle shadow from global.dist.css */
 }
 
 .search-input {
@@ -195,7 +205,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 17px; /* Body text per HIG */
   color: #000000;
-  padding: 8px; /* 8-point padding */
+  padding: 8px 12px; /* Adjusted for Apple’s search input style */
   outline: none;
 }
 
@@ -208,21 +218,23 @@ body {
   border: none;
   padding: 8px;
   cursor: pointer;
-  min-width: 44px; /* Minimum touch target */
+  min-width: 44px; /* Touch target */
   min-height: 44px;
 }
 
 .search-icon {
-  stroke: #8e8e93; /* Neutral gray for icon */
+  stroke: #8e8e93;
 }
 
-.search-button:hover .search-icon {
-  stroke: #007aff; /* Apple’s blue on hover */
+.search-button:hover .search-icon,
+.search-button:focus .search-icon {
+  stroke: #007aff; /* Apple’s blue for interactivity */
 }
 
 @media (prefers-color-scheme: dark) {
   .search-bar {
-    background: rgba(28, 37, 38, 0.8); /* Dark mode blur */
+    background: rgba(28, 37, 38, 0.92); /* Dark mode translucency */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
   .search-input {
     color: #ffffff;
@@ -230,14 +242,7 @@ body {
   .search-input::placeholder {
     color: #8e8e93;
   }
-  .search-icon {
-    stroke: #8e8e93;
-  }
-  .search-button:hover .search-icon {
-    stroke: #0a84ff;
-  }
 }
-
 /* SearchReseult */
 .search-results {
   padding: 0 8px; /* 8-point safe area */
