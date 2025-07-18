@@ -7,9 +7,14 @@ This repository demonstrates how to deploy a React app that uses React Router to
 ## 🚀 Quick Start
 
 **Clone, install, and run the app:**
-```git clone``` ```https://github.com/rahulshahare/react-router-gh-pages.git```
+
+```git clone```
+ ```https://github.com/rahulshahare/react-router-gh-pages.git```
+
 ```cd react-router-gh-pages```
+
 ```npm install```
+
 ```npm start```
 
 
